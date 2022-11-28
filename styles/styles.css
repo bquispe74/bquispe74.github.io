@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    min-height: 70px;
+    margin: 0px;
+    background-color: rgb(45, 45, 124);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+.logo img{
+    height: 70px;
+    margin-right: 10px;
+}
+.logo h2{
+    font-weight: 800;
+    font-size: 30px;
+}
+
+nav .nav_list .list{
+    display: inline-block;
+}
+.nav_list .list a{
+    color: beige;
+    text-decoration: none;
+    font-weight: 600;
+    padding-right: 10px;
+
+}
+.nav_list .list a::after{
+    content: " | ";
+}
+.nav_list .list a:hover{
+    color: aqua;
+}
+.nav_list .list a:active{
+    color: mediumvioletred;
+}
+.bio{
+    padding-left: 10px;
+    background-color: aquamarine;
+}
+
+@media (max-width:900px){
+    header{
+        flex-direction: column;
+    }
+}
+main h1{
+    font-weight: 900;
+    text-align: center;
+    color: black;
+    background-color: rgb(78, 55, 195);
+}
+main .name1{
+    font-weight: 800;
+    color: red;
+    padding-left: 10px;
+    background-color: aquamarine;
+}
+.menu .menu_li{
+    display: inline-block;
+    font-size: 25px;
+    background-color: wheat;
+    border-radius: 5px;
+
+
+}
+.menu .menu_li a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    padding-left: 10px;
+
+}
+.menu .menu_li a:hover{
+    color: rgb(51, 184, 137);
+}
+.menu .menu_li a:active{
+    color: red;
+}
+.main_desc{
+    color: rgb(8, 55, 51);
+    padding: 10px;
+    font-weight: 800;
+    font-size: 35px;
+    background-color: rgb(243, 146, 146);
+}
+table{
+    text-align: left;
+    background-color: blanchedalmond;
+    width: 100%;
+    padding-left: 10px;
+    border-collapse: collapse;
+}
+td, th{
+    border: solid 2px black;
+    padding: 10px;
+}
+th{
+    background-color: aqua;
+}
+tr:hover{
+    background-color: #369681;
+}
+.imagen{
+    text-align: center;
+    background-color: rgb(151, 149, 149);
+    
+}
+.imagen img{
+    min-width: 50%;
+    margin: 0 auto;
+    max-width: 60%;
+}
+.image{
+    min-width: 50%;
+    text-align: center;
+    background-color: rgb(120, 119, 119);
+    margin: 0 auto;
+}
+.image img{
+    min-width: 50%;
+    margin: 0 auto;
+    max-width: 60%;
+}
+.descr{
+    min-width: 70%;
+    color: rgb(57, 57, 115);
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.video{
+
+    text-align: center;
+    background-color: rgb(56, 54, 54);
+
+
+}
+.video iframe{
+    max-width: 50%;
+    margin: 0 auto;
+    min-width: 50%;
+    min-height: 50%;
+    max-height: 50%;
+}
+.foo{
+    background-color: rgb(45, 45, 124);
+    text-align: center;
+    margin: 15px;
+}
