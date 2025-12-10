@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marco Teórico | Patata Republic</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="hm-wrapper">
+
+    <!-- Header global -->
+    <div id="site-header"></div>
+
+    <!-- =======================
+         PORTADA MARCO TEÓRICO
+    ======================== -->
+    <div class="hm-page-block">
+      <div class="container">
+        <div class="header-title">
+          <h1 data-aos="fade-up">Marco Teórico</h1>
+        </div>
+        <p data-aos="fade-up" data-aos-duration="900">
+          El presente marco teórico describe los conceptos fundamentales que sustentan el sistema
+          informático desarrollado para <b>Patata Republic</b>, incluyendo la Programación Orientada a
+          Objetos, el modelado UML y la gestión de inventarios aplicada al negocio.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- =======================
+         TARJETAS TEÓRICAS
+    ======================== -->
+    <div class="hm-page-block bg-fondo">
+      <div class="container">
+
+        <!-- 🟥 POO -->
+<div class="teoria-card" id="mt-poo" data-aos="fade-right">
+          <h2>Programación Orientada a Objetos</h2>
+          <p>
+            La <b>POO</b> organiza el software mediante <b>clases</b> y <b>objetos</b> que representan entidades del
+            mundo real. Se basa en cuatro pilares:
+          </p>
+          <ul>
+            <li><b>Encapsulamiento:</b> protege los datos internos de una clase.</li>
+            <li><b>Herencia:</b> permite reutilizar y extender código existente.</li>
+            <li><b>Polimorfismo:</b> un método puede comportarse distinto según el objeto.</li>
+            <li><b>Abstracción:</b> modela características esenciales del negocio.</li>
+          </ul>
+          <p>
+            En el sistema de <b>Patata Republic</b> se modelan actores del negocio como clientes,
+            cajeros, administradores, productos y pedidos, haciendo el sistema modular y escalable.
+          </p>
+        </div>
+
+        <!-- 🟦 UML -->
+<div class="teoria-card" id="mt-uml" data-aos="fade-left">
+          <h2>UML — Lenguaje de Modelado Unificado</h2>
+          <p>
+            UML define un conjunto de diagramas que permiten representar las <b>estructuras</b> y el
+            <b>comportamiento</b> del sistema antes de programarlo. Es un estándar para comunicar el
+            diseño entre los miembros del proyecto y los interesados.
+          </p>
+          <p>Tipos principales utilizados:</p>
+          <ul>
+            <li><b>Diagrama de clases:</b> estructura estática del sistema.</li>
+            <li><b>Casos de uso:</b> funcionalidades del sistema desde el punto de vista del usuario.</li>
+          </ul>
+        </div>
+
+        <!-- 🟨 Casos de uso -->
+<div class="teoria-card" id="mt-casos-uso" data-aos="fade-right">
+          <h2>Diagramas de Casos de Uso</h2>
+          <p>
+            Representan cómo los <b>actores</b> (cliente, cajero, administrador) interactúan con el
+            sistema informático. Se clasifican en:
+          </p>
+          <ul>
+            <li><b>Casos de uso de negocio:</b> representan procesos del negocio sin tecnología.</li>
+            <li><b>Casos de uso del sistema:</b> describen el uso del software para ejecutar esos procesos.</li>
+          </ul>
+          <p>
+            Sirven como base para los requisitos funcionales y las pruebas del sistema.
+          </p>
+        </div>
+
+        <!-- 🟩 Inventarios -->
+<div class="teoria-card" id="mt-inventarios" data-aos="fade-left">
+          <h2>Sistema de Gestión de Inventarios</h2>
+          <p>
+            Patata Republic necesita controlar insumos como papas, aceites y envases. Un sistema de
+            inventario garantiza la disponibilidad de productos y reduce pérdidas.
+          </p>
+          <ul>
+            <li>Registro de ingresos y salidas de stock</li>
+            <li>Control de cantidad mínima</li>
+            <li>Reportes para toma de decisiones</li>
+          </ul>
+          <p>
+            Este módulo se integra con los pedidos, descontando automáticamente los insumos utilizados.
+          </p>
+        </div>
+
+
+        <!-- 📌 Conclusión -->
+        <div class="teoria-card" data-aos="fade-up">
+          <h2>Conclusión</h2>
+          <p>
+            La aplicación de POO junto al modelado UML permitió diseñar un sistema informático
+            funcional y alineado al negocio. La automatización del inventario y ventas proporciona
+            eficiencia operativa, control y crecimiento para <b>Patata Republic</b>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="site-footer"></div>
+  </div>
+
+  <script src="js/layout.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200 });
+  </script>
+</body>
+</html>
