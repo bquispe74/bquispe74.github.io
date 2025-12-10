@@ -1,0 +1,2086 @@
+:root{
+    --color-principal: #FF5A5F;
+    --color-primary-hover:#d64246;
+    --color-verde:#04A75B;
+    --color-negro: #444A47;
+    --color-fondo: #F7F9FD;
+    --color-footer: #151515;
+}
+
+*,::after, ::before{
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0px;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.hm-wrapper{
+    position: relative;
+}
+
+.hm-wrapper, body{
+    min-height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.bg-fondo{
+    background: var(--color-fondo);
+}
+
+.container{
+    width: 1122px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1px){
+    .container{
+        width: auto;
+        max-width: 1122px !important;
+    }
+}
+
+.uppercase{
+    text-transform: uppercase !important;
+}
+
+/*=================================
+    ESTILOS: Botones
+==================================*/
+
+.hm-btn{
+    display: inline-block;
+    position: relative;
+    padding: 12px 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    outline: 0;
+}
+
+.btn-primary{
+    background: var(--color-principal);
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.btn-primary:hover{
+    background: var(--color-primary-hover);
+}
+
+/*=================================
+    ESTILOS: Header
+==================================*/
+
+.header-menu-movil{
+    display: none;
+}
+
+.hm-header{
+    position: relative;
+    height: 64px;
+    background: #fff;
+    line-height: 64px;
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    overflow: visible; /* permite que se vea la previsualización */
+}
+.hm-header .container{
+    height: 100%;
+}
+
+.hm-header.header-fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 8%);
+    z-index: 99;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.header-menu{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu .hm-logo{
+    width: 202px;
+}
+
+.hm-menu{
+    display: flex;
+    position: relative;
+}
+
+.hm-menu ul{
+    display: flex;
+}
+
+.hm-menu ul li a{
+    color: var(--color-negro);
+    font-size: 15px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.hm-menu ul li a:hover{
+    color: var(--color-principal);
+}
+
+
+
+/* ====== Preview en menú ====== */
+.hm-menu ul li.preview{
+    position: relative;
+}
+
+/* Caja flotante */
+.hm-menu ul li .preview-box{
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 260px;
+    background: #fff;
+    border: 1px solid #EEF5F9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 1000;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.hm-menu ul li .preview-box img{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.hm-menu ul li.preview:hover .preview-box,
+.hm-menu ul li.preview:focus-within .preview-box{
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Alinear a la derecha cuando el item esté al borde */
+.hm-menu ul li.preview.align-right .preview-box{
+    left: auto;
+    right: 0;
+}
+
+/* Accesibilidad: reducir animaciones */
+@media (prefers-reduced-motion: reduce){
+    .hm-menu ul li .preview-box{
+        transition: none;
+    }
+}
+
+/* Ocultar previews en móvil (no hay hover) */
+@media screen and (max-width: 800px){
+    .hm-menu ul li .preview-box{
+        display: none !important;
+    }
+}
+
+/*=================================
+    ESTILOS: banner
+==================================*/
+.hm-banner{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.hm-banner a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.hm-banner .img-banner{
+    height: 100%;
+}
+
+/*=================================
+    ESTILOS: categorias home
+==================================*/
+.hm-page-block{
+    position: relative;
+    padding: 60px 0px;
+}
+
+.header-title{
+    margin-bottom: 50px;
+}
+
+.header-title h1{
+    color: var(--color-negro);
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 16px;
+}
+
+.header-title h1::after{
+    content: '';
+    width: 76px;
+    height: 5px;
+    background: var(--color-principal);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    border-radius: 3px;
+}
+
+.hm-grid-category,
+.grid-product{
+    display: grid;
+    grid-template-columns: repeat(4,calc(25% - 2rem*3/4));
+    row-gap: 2rem;
+    column-gap: 2rem;
+    max-width: 1122px;
+}
+
+.hm-grid-category .grid-item{
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 360px;
+}
+
+.hm-grid-category .grid-item img,
+.grid-product .product-item .p-portada img{
+    transition: all .3s ease-in;
+}
+
+.hm-grid-category .grid-item img:hover,
+.grid-product .product-item .p-portada img:hover{
+    transform: scale(1.07);
+}
+
+.hm-grid-category .grid-item:hover .c-info{
+    transform: translateY(0%);
+}
+
+.hm-grid-category .grid-item .c-info{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 40%);
+    transform: translateY(100%);
+    transition: all .3s ease-in;
+}
+
+.hm-grid-category .grid-item .c-info h3{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/*=================================
+    ESTILOS: Productos destacados
+==================================*/
+
+.hm-tabs{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.hm-tabs .hm-tab-link{
+    margin: 0px 20px;
+    background: #fff;
+    border:1px solid #EEF5F9;
+    padding: 10px 30px;
+    border-radius: 22px;
+    color: #7C807E;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.hm-tabs .hm-tab-link.active,
+.hm-tabs .hm-tab-link:hover{
+    background: var(--color-principal);
+    color: #fff;
+}
+
+.hm-tabs .hm-tab-link.active .tabs-content{
+    background: red;
+}
+
+/* CONTENIDO TABs */
+.tabs-content{
+    display: none;
+    padding-top: 50px;
+}
+
+.tabs-content.tab-active{
+    display: block;
+}
+
+.grid-product .product-item{
+    overflow: hidden;
+    background: #fff;
+    border:1px solid #EEF5F9;
+    border-radius: 5px;
+}
+
+.grid-product .product-item:hover{
+    box-shadow: 0px 8px 24px rgba(220,229,245,63%);
+}
+
+.grid-product .product-item .p-portada{
+    width: 100%;
+    height: 265px;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-product .product-item .p-portada .stin{
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    background: var(--color-fondo);
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 16px;
+}
+
+.grid-product .product-item .p-portada .stin.stin-new{
+    background: var(--color-verde);
+    color: #fff;
+}
+
+.grid-product .product-item .p-portada .stin.stin-oferta{
+    background: var(--color-principal);
+    color: #fff;
+}
+
+.grid-product .product-item .p-info{
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 265px);
+}
+
+.grid-product .product-item .p-info h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-negro);
+    line-height: 26px;
+    margin-bottom: 16px;
+}
+
+.grid-product .product-item .p-info .precio{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.grid-product .product-item .p-info .precio span{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-negro);
+}
+
+.grid-product .product-item .p-info .precio span.thash{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    color: #A7A7A7;
+    text-decoration: line-through;
+}
+
+.grid-product .product-item .p-info .hm-btn{
+    width: 100%;
+}
+
+/*=================================
+    ESTILOS: Footer
+==================================*/
+
+footer{
+    background: #151515;
+    padding: 80px 0px;
+}
+
+footer .foo-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .foo-row .foo-col{
+    width: 50%;
+}
+
+footer .foo-row .foo-col:last-child{
+    margin-left: 50px;
+}
+
+footer .foo-row .foo-col:first-child{
+    margin-right: 50px;
+}
+
+footer .foo-row .foo-col h2{
+    color: #E3E3E3;
+    line-height: 40px;
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+footer form .f-input{
+    width: 100%;
+    position: relative;
+}
+
+footer form .f-input input{
+    width: 100%;
+    display: block;
+    padding: 16px 30px;
+    background: #2C2B2B;
+    border: none;
+    padding-right: 50px;
+    font-size: 15px;
+    border-radius: 25px;
+    outline: 0;
+    color: #A7A1A1;
+}
+
+footer form .f-input .hm-btn-round{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border: none;
+    font-size: 18px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+footer .foo-row .foo-col ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .foo-row .foo-col ul li{
+    width: 50%;
+    margin-bottom: 16px;
+}
+
+footer .foo-row .foo-col ul li a{
+    color: #E3E3E3;
+    font-size: 15px;
+}
+
+footer .foo-row .foo-col ul li a:hover{
+    color: var(--color-principal);
+    text-decoration: underline;
+}
+
+.foo-copy{
+    background: #000000;
+    padding: 40px 0px;
+}
+
+.foo-copy p{
+    text-align: center;
+    color: #E3E3E3;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/*=================================
+    ESTILOS: RESPONSIVE
+==================================*/
+@media screen and (max-width: 1024px){
+    .grid-product{
+        grid-template-columns: repeat(3,calc(33.33% - 2rem*2/3));
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+}
+
+.hm-header .icon-menu{
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    .hm-banner{
+        height: 400px;
+        min-height: 400px;
+    }
+
+    .hm-grid-category,
+    .grid-product{
+        grid-template-columns: repeat(2,calc(50% - 2rem*1/2));
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+
+    .hm-header .hm-menu ul{
+        display: none;
+    }
+
+    .hm-header .icon-menu{
+        display: block;
+        margin-left: 20px;
+    }
+
+    .hm-header .icon-menu button{
+        background: transparent;
+        border: none;
+        font-size: 22px;
+        color: var(--color-negro);
+    }
+
+    footer .foo-row{
+        flex-direction: column;
+    }
+
+    footer .foo-row .foo-col{
+        width: 100%;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    footer .foo-row .foo-col ul{
+        display: none;
+    }
+
+    .hm-tabs .hm-tab-link{
+        margin: 0px 10px;
+        margin-bottom: 10px;
+    }
+
+    /* menu */
+    .header-menu-movil{
+        background: var(--color-principal);
+        position: fixed;
+        display: block;
+        padding: 40px;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        transition: all .3s ease;
+        transform: translate(-100%);
+    }
+
+    .header-menu-movil.active{
+        transform: translate(0%);
+    }
+
+    .header-menu-movil .cerrar-menu{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 50%;
+        border: none;
+        background: #fff;
+        font-size: 18px;
+        color: var(--color-negro);
+    }
+
+    .header-menu-movil ul li{
+        position: relative;
+        margin: 10px 0px;
+    }
+
+    .header-menu-movil ul li a{
+        display: inline-block;
+        color: #fff;
+    }
+
+    /* contacto */
+    body10{
+        height: 100%;
+        font-family: 'Noto Sans', sans-serif;
+        background-color: #ab4493;
+    }
+
+    .contact_form{
+        width: 460px;
+        height: auto;
+        margin: 80px auto;
+        border-radius: 10px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        background-color: #fbfbfb;
+        padding-left: 30px;
+    }
+
+    input{
+        background-color: #fbfbfb;
+        width: 408px;
+        height: 40px;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #ab4493;
+        margin-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    textarea{
+        background-color: #fbfbfb;
+        width: 405px;
+        height: 150px;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #ab4493;
+        margin-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        padding-top: 15px;
+    }
+
+    label{
+        display: block;
+        float: center;
+    }
+
+    button{
+        height: 45px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        text-transform: uppercase;
+        background-color: #ab4493;
+        border-color: #ab4493;
+        border-style: solid;
+        border-radius: 10px;
+        width: 420px;
+        cursor: pointer;
+    }
+
+    button p{
+        color: #fff;
+    }
+
+    span{
+        color: #ab4493;
+    }
+
+    .aviso{
+        font-size: 13px;
+        color: #0e0e0e;
+    }
+
+    h1{
+        font-size: 39px;
+        text-align: letf;
+        padding-bottom: 20px;
+        color: #ab4493;
+    }
+
+    h3{
+        font-size: 16px;
+        padding-bottom: 30px;
+        color: #0e0e0e;
+    }
+
+    p{
+        font-size: 14px;
+        color: #0e0e0e;
+    }
+
+    ::-webkit-input-placeholder { color: #a8a8a8; }
+    ::-webkit-textarea-placeholder { color: #a8a8a8; }
+
+    .formulario input:focus{
+        outline:0;
+        border: 1px solid #97d848;
+    }
+
+    .formulario textarea:focus{
+        outline:0;
+        border: 1px solid #97d848;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .hm-banner{
+        height: 320px;
+        min-height: 320px;
+    }
+
+    .hm-grid-category{
+        grid-template-columns: repeat(2,calc(50% - 1rem*1/2));
+        column-gap: 1rem;
+        row-gap: 1rem;
+    }
+
+    .grid-product {
+        grid-template-columns: repeat(1,100%);
+        column-gap: 1rem;
+    }
+
+    .hm-tabs .hm-tab-link{
+        margin: 0px 10px;
+        margin-bottom: 10px;
+    }
+}
+/* ======= Submenú desplegable estilo Patata Republic ======= */
+
+.hm-menu ul li.submenu {
+  position: relative;
+}
+
+.hm-menu ul li.submenu > a::after {
+  content: " ▼";
+  font-size: 10px;
+  color: var(--color-negro);
+  transition: transform 0.3s;
+}
+
+.hm-menu ul li.submenu:hover > a::after {
+  transform: rotate(180deg);
+  color: var(--color-principal);
+}
+
+.hm-menu ul li.submenu .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  min-width: 260px;
+  padding: 10px 0;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.hm-menu ul li.submenu:hover .dropdown {
+  display: block;
+}
+
+.hm-menu ul li.submenu.align-right .dropdown {
+  left: auto;
+  right: 0;
+}
+
+.hm-menu ul li.submenu .dropdown li {
+  display: block;
+  width: 100%;
+}
+
+.hm-menu ul li.submenu .dropdown li a {
+  display: block;
+  padding: 10px 18px;
+  color: var(--color-negro);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.hm-menu ul li.submenu .dropdown li a:hover {
+  background-color: var(--color-fondo);
+  color: var(--color-principal);
+  padding-left: 22px;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Evitar overflow oculto */
+.hm-header {
+  overflow: visible;
+}
+
+/* En móviles se desactiva el hover */
+@media screen and (max-width: 800px) {
+  .hm-menu ul li.submenu .dropdown {
+    display: none !important;
+  }
+}
+
+/* === Contacto (desktop y móvil) === */
+.contact_form{
+  width: 100%;
+  max-width: 560px;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  background: #fff;
+  border:1px solid #EEF5F9;
+  box-shadow: 0 8px 24px rgba(220,229,245,0.63);
+  padding: 24px 22px;
+}
+
+.formulario p { margin-bottom: 14px; }
+.formulario label { display:block; font-weight:600; color: var(--color-negro); margin-bottom: 6px; }
+
+.formulario input,
+.formulario textarea{
+  width: 100%;
+  background: #fbfbfb;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #0e0e0e;
+  outline: 0;
+}
+
+.formulario input:focus,
+.formulario textarea:focus{
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 3px rgba(255,90,95,0.12);
+}
+
+.formulario textarea { min-height: 120px; resize: vertical; }
+
+#enviar{
+  width: 100%;
+  height: auto;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--color-principal);
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease;
+  margin-top: 6px;
+}
+#enviar:hover{ background: var(--color-primary-hover); }
+#enviar p{ color:#fff; margin:0; font-weight:600; letter-spacing:.3px; }
+
+.obligatorio{ color: var(--color-principal); }
+.aviso{ color:#666; font-size: 13px; }
+
+/* que el header no recorte dropdowns/previews */
+.hm-header{ overflow: visible; }
+
+.modelo-img {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.modelo-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.subtitulo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--color-negro);
+}
+
+
+/* Panel combinado para Modelo Esencial */
+.as-panel-two {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding: 16px;
+  width: 330px;
+  display: none;
+}
+
+/* Ahora solo aparece cuando el usuario pasa sobre texto "modelo esencial" */
+/* Panel se muestra mientras el puntero esté:
+   - sobre el item completo del menú ("Análisis Estructurado")
+   - sobre el contenedor de teoría
+   - o sobre el propio panel derecho */
+.submenu-estructurado:hover .as-panel-two,
+.as-contenedor:hover .as-panel-two,
+.as-panel-two:hover {
+  display: block;
+}
+
+
+.as-item {
+  margin-bottom: 18px;
+}
+
+.as-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-negro);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.as-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.as-item:nth-child(2) .as-mini-grid {
+  grid-template-columns: repeat(1, 1fr); /* 1 imagen */
+}
+
+.as-mini-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.as-mini-grid span {
+  text-align: center;
+  font-size: 10px;
+  display: block;
+  margin-top: 3px;
+  color: #444;
+}
+/* ======== Análisis Estructurado: paso a paso ======== */
+
+/* dropdown de teoría (paso 1) */
+.submenu-estructurado {
+  position: relative;
+}
+
+.submenu-estructurado .as-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 16px 18px;
+  width: 320px;
+  z-index: 2000;
+}
+
+/* mostrar teoría al posar sobre "Análisis Estructurado" */
+.submenu-estructurado:hover .as-dropdown,
+.as-dropdown:hover {
+  display: block;
+}
+
+.as-contenedor {
+  position: relative;
+}
+
+.as-contenedor p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-negro);
+  margin: 0;
+}
+
+/* texto "modelo esencial" (paso 2) */
+.as-link-modelo {
+  color: var(--color-principal);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Panel con las dos opciones: Ambiental / Comportamiento */
+.as-model-options {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 8px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 10px 12px;
+  min-width: 220px;
+  display: none;
+  z-index: 2050;
+}
+
+/* Mostrar opciones cuando el mouse esté dentro de la tarjeta de teoría
+   o dentro del propio panel de opciones */
+.as-contenedor:hover .as-model-options,
+.as-model-options:hover{
+  display: block;
+}
+
+
+/* Forzar la lista del modelo esencial a ser vertical */
+.as-model-options ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* === VERTICAL === */
+  gap: 8px;
+}
+
+
+.as-opcion {
+  position: relative;
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.as-opcion a {
+  color: var(--color-negro);
+  text-decoration: none;
+  display: block;
+}
+
+.as-opcion:hover {
+  background: var(--color-fondo);
+}
+
+/* Miniaturas (paso 3 y 4) */
+.as-subpreview {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 8px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 10px;
+  display: none;
+  z-index: 2100;
+}
+
+/* mostrar miniaturas sólo cuando paso sobre cada rama */
+.as-opcion:hover .as-subpreview,
+.as-subpreview:hover {
+  display: grid;
+}
+
+/* grid para 4 miniaturas */
+.as-subpreview.as-grid-4 {
+  grid-template-columns: repeat(4, 70px);
+  gap: 6px;
+}
+
+/* grid para 1 miniatura (comportamiento) */
+.as-opcion:nth-child(2) .as-subpreview {
+  grid-template-columns: 150px;
+  justify-content: center;
+}
+
+.as-subpreview a {
+  text-align: center;
+  font-size: 10px;
+  text-decoration: none;
+  color: var(--color-negro);
+}
+
+.as-subpreview img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 3px;
+}
+
+/* En móviles desactivamos todo esto y que sea solo enlace normal */
+@media screen and (max-width: 800px){
+  .submenu-estructurado .as-dropdown,
+  .submenu-estructurado .as-model-options,
+  .submenu-estructurado .as-subpreview {
+    display: none !important;
+  }
+}
+
+/* ======== MENÚ: Análisis Estructurado (paso a paso) ======== */
+
+/* Item del nav */
+.submenu-estructurado{
+  position: relative;
+}
+
+/* Paso 1: teoría al posar en "Análisis Estructurado" */
+.submenu-estructurado .as-dropdown{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 16px 18px;
+  width: 320px;
+  z-index: 2000;
+}
+
+/* Mostrar solo mientras el mouse esté sobre el item o la caja */
+.submenu-estructurado:hover .as-dropdown,
+.as-dropdown:hover{
+  display: block;
+}
+
+/* Contenedor del texto */
+.as-contenedor{
+  position: relative;
+}
+
+.as-contenedor p{
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-negro);
+  margin: 0;
+}
+
+/* Texto "modelo esencial" */
+.as-link-modelo{
+  color: var(--color-principal);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Paso 2: panel con "Modelo Ambiental" y "Modelo de Comportamiento" */
+.as-model-options{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 8px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 10px 12px;
+  min-width: 220px;
+  display: none;
+  z-index: 2050;
+}
+
+/* Se muestra solo cuando pasas por "modelo esencial" o por el panel de opciones */
+.as-link-modelo:hover + .as-model-options,
+.as-model-options:hover{
+  display: block;
+}
+
+.as-model-options ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.as-opcion{
+  position: relative;
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.as-opcion a{
+  color: var(--color-negro);
+  text-decoration: none;
+  display: block;
+}
+
+.as-opcion:hover{
+  background: var(--color-fondo);
+}
+
+/* Paso 3 y 4: miniaturas de cada rama */
+.as-subpreview{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 8px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 10px;
+  display: none;
+  z-index: 2100;
+}
+
+/* Mostrar miniaturas solo mientras se pasa por la rama o la caja de miniaturas */
+.as-opcion:hover .as-subpreview,
+.as-subpreview:hover{
+  display: grid;
+}
+
+/* 4 miniaturas (Modelo Ambiental) */
+.as-subpreview.as-grid-4{
+  grid-template-columns: repeat(4, 70px);
+  gap: 6px;
+}
+
+/* 1 miniatura (Modelo de Comportamiento) */
+.as-opcion:nth-child(2) .as-subpreview{
+  grid-template-columns: 150px;
+  justify-content: center;
+}
+
+.as-subpreview a{
+  text-align: center;
+  font-size: 10px;
+  text-decoration: none;
+  color: var(--color-negro);
+}
+
+.as-subpreview img{
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 3px;
+}
+
+/* En móviles desactivamos el comportamiento especial
+   (para que solo sea un enlace normal) */
+@media screen and (max-width: 800px){
+  .submenu-estructurado .as-dropdown,
+  .submenu-estructurado .as-model-options,
+  .submenu-estructurado .as-subpreview{
+    display: none !important;
+  }
+}
+/* ===== 🌟 Estilo Final Ultra Pro para Menú de Análisis Estructurado 🌟 ===== */
+
+.submenu-estructurado .as-dropdown {
+    padding: 18px;
+    width: 360px;
+    border-radius: 14px;
+}
+
+.as-contenedor p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.45;
+}
+
+.as-link-modelo {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-principal);
+    cursor: pointer;
+}
+
+.as-model-options {
+    border-radius: 14px;
+    min-width: 200px;
+    padding: 8px 10px;
+}
+
+.as-model-options ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.as-opcion {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-negro);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background .15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.as-opcion::after {
+    content: "▶";
+    font-size: 11px;
+    opacity: .6;
+}
+
+.as-opcion:hover {
+    background: var(--color-fondo);
+    color: var(--color-principal);
+}
+
+.as-subpreview {
+    border-radius: 14px;
+    padding: 14px;
+    width: auto;
+}
+
+.as-subpreview.as-grid-4 {
+    grid-template-columns: repeat(2, 100px);
+    gap: 10px;
+}
+
+.as-subpreview a {
+    font-size: 11px;
+    color: #444;
+}
+
+.as-subpreview img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.12);
+    transition: transform .2s ease;
+}
+
+.as-subpreview img:hover {
+    transform: scale(1.06);
+}
+
+/* Modelo de Comportamiento solo 1 miniatura centrada */
+.as-opcion:nth-child(2) .as-subpreview {
+    grid-template-columns: 140px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 🛠 Forzar que cada título del submenú se mantenga en una sola línea */
+.as-opcion a {
+    white-space: nowrap !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+
+/* Alinear la flechita siempre en la misma línea */
+.as-opcion::after {
+    position: relative;
+    top: 1px;
+}
+
+/* 📌 Expandir el panel de miniaturas para Modelo Ambiental */
+.as-subpreview.as-grid-4 {
+    width: 360px; /* antes era muy pequeño */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 14px;
+}
+
+/* 📌 Mejor tamaño y separación de imágenes */
+.as-subpreview img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.as-subpreview a {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* 📌 Ajustar el subpanel principal para que todo respire mejor */
+.as-model-options {
+    min-width: 240px;
+    padding: 12px 14px;
+}
+
+
+/* ====== Arreglo bonito para las 4 miniaturas del Modelo Ambiental ====== */
+
+.as-subpreview.as-grid-4{
+  
+  grid-template-columns: repeat(2, 1fr);  /* 2 columnas */
+  gap: 12px;
+  width: 420px;                           /* más ancho para que respiren */
+  padding: 14px;
+}
+
+/* Cada miniatura: imagen arriba, texto debajo centrado */
+.as-subpreview.as-grid-4 a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 11px;
+  text-decoration: none;
+  color: var(--color-negro);
+}
+
+.as-subpreview.as-grid-4 img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.as-subpreview.as-grid-4 span{
+  display: block;
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+   MENÚ ESPECIAL: ORIENTADO A OBJETOS (UML)
+   - Secuencia:
+     1) Hover en "Orientado a Objetos" -> aparece teoría UML
+     2) Hover en "diagramas UML" -> panel con las 3 opciones
+     3) Hover en cada opción -> miniatura correspondiente
+   ========================================================= */
+/* =========================================================
+   MENÚ ESPECIAL: ORIENTADO A OBJETOS — SECUENCIAL
+   ========================================================= */
+
+.hm-menu ul li.submenu-oo {
+  position: relative;
+}
+
+/* == Paso 1: Mostrar solo teoría al posar en O.O. == */
+.oo-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 16px 18px;
+  width: 340px;
+  z-index: 2100;
+}
+
+.submenu-oo:hover .oo-dropdown,
+.oo-dropdown:hover {
+  display: block;
+}
+
+.oo-contenedor {
+  position: relative;
+}
+
+.oo-contenedor p {
+  font-size: 13px;
+  color: var(--color-negro);
+  margin: 0 0 6px 0;
+  line-height: 1.4;
+}
+
+/* texto "diagramas UML" */
+.oo-link-diagramas {
+  font-weight: 600;
+  color: var(--color-principal);
+  cursor: pointer;
+}
+
+/* == Paso 2: panel con las tres opciones verticales == */
+.oo-options {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  width: 240px;
+  z-index: 2150;
+}
+
+/* Importante: ahora se abre cuando el mouse está
+   sobre la caja de teoría o sobre el propio panel */
+.oo-contenedor:hover .oo-options,
+.oo-options:hover {
+  display: block;
+}
+
+.oo-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;           /* <-- forzamos flex propio */
+  flex-direction: column;  /* <-- en columna (vertical) */
+}
+
+
+.oo-option {
+  padding: 8px 6px;
+  display: block;
+  font-size: 13px;
+  color: var(--color-negro);
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+}
+
+
+.oo-option:hover {
+  color: var(--color-principal);
+  background: var(--color-fondo);
+}
+
+/* == Paso 3: Miniaturas en hover == */
+.oo-subpreview {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+  z-index: 2300;
+}
+
+.oo-option:hover .oo-subpreview,
+.oo-subpreview:hover {
+  display: block;
+}
+
+.oo-subpreview img {
+  width: 220px;          /* un poco más grande para que se vean mejor */
+  height: auto;
+  border-radius: 8px;
+}
+
+.oo-subpreview span {
+  display: block;
+  margin-top: 4px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--color-negro);
+}
+
+/* Desactivar en móvil */
+@media screen and (max-width: 800px) {
+  .submenu-oo .oo-dropdown,
+  .submenu-oo .oo-options,
+  .submenu-oo .oo-subpreview {
+    display: none !important;
+  }
+}
+
+.oo-option {
+  white-space: nowrap;   /* ❗ No permitir saltos de línea */
+  width: max-content;    /* Ajusta el ancho al contenido */
+}
+
+/* === Opciones verticales === */
+.oo-options {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  width: auto; /* Se adapta al contenido */
+  min-width: 220px;
+  z-index: 2150;
+}
+
+.oo-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Opciones ajustadas en una sola línea */
+.oo-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-negro);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  border-radius: 6px;
+}
+
+.oo-option:hover {
+  background: rgba(220, 53, 69, 0.12); /* tono del rojo de tu web */
+  color: var(--color-principal);
+}
+
+/* flechita más visible y alineada */
+.oo-option i {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+/* === Miniaturas === */
+.oo-subpreview {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  padding: 14px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  z-index: 2300;
+}
+
+.oo-option:hover .oo-subpreview,
+.oo-subpreview:hover {
+  display: block;
+}
+
+.oo-subpreview img {
+  width: 260px;
+  border-radius: 10px;
+}
+
+.oo-subpreview span {
+  display: block;
+  margin-top: 6px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-negro);
+}
+
+/* Móvil: se desactiva */
+@media (max-width: 800px) {
+  .submenu-oo .oo-dropdown,
+  .submenu-oo .oo-options,
+  .submenu-oo .oo-subpreview {
+    display: none !important;
+  }
+}
+
+/*========================================*/
+
+/* ============================
+   MARCO TEÓRICO - Tarjetas
+============================ */
+.teoria-card {
+  background: #fff;
+  padding: 28px 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+  margin-bottom: 35px;
+  transition: 0.3s ease-in-out;
+}
+
+.teoria-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+.teoria-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-principal);
+  margin-bottom: 12px;
+}
+
+.teoria-card ul {
+  padding-left: 18px;
+}
+
+.teoria-card ul li {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* =========================================================
+   MENÚ ESPECIAL: MARCO TEÓRICO — SECUENCIAL
+   ========================================================= */
+
+.hm-menu ul li.submenu-mt {
+  position: relative;
+}
+
+/* Paso 1: cuadro de teoría */
+.mt-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 16px 18px;
+  width: 360px;
+  z-index: 2100;
+}
+
+.submenu-mt:hover .mt-dropdown,
+.mt-dropdown:hover {
+  display: block;
+}
+
+.mt-contenedor p {
+  font-size: 13px;
+  color: var(--color-negro);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Paso 2: panel de temas (solo texto, sin imágenes) */
+.mt-options {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  width: 260px;
+  z-index: 2150;
+}
+
+.mt-link-temas {
+  font-weight: 600;
+  color: var(--color-principal);
+  cursor: pointer;
+}
+
+.mt-link-temas:hover + .mt-options,
+.mt-options:hover {
+  display: block;
+}
+
+.mt-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mt-option {
+  padding: 6px 0;
+}
+
+.mt-option a {
+  font-size: 13px;
+  color: var(--color-negro);
+  text-decoration: none;
+}
+
+.mt-option a:hover {
+  color: var(--color-principal);
+}
+
+/* Desactivar menú especial en móvil */
+@media screen and (max-width: 800px) {
+  .submenu-mt .mt-dropdown,
+  .submenu-mt .mt-options {
+    display: none !important;
+  }
+}
+/* =========================================================
+   MENÚ ESPECIAL: VIDEO — TEORÍA + OPCIONES
+   ========================================================= */
+
+.hm-menu ul li.submenu-video {
+  position: relative;
+}
+
+/* Globo principal con la teoría (OBS, explicación) */
+.video-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;              /* como está a la derecha del menú */
+  left: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 18px 20px;
+  width: 360px;
+  z-index: 2200;
+}
+
+.submenu-video:hover .video-dropdown,
+.video-dropdown:hover {
+  display: block;
+}
+
+.video-contenedor {
+  position: relative;
+}
+
+.video-contenedor p {
+  font-size: 13px;
+  color: var(--color-negro);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Enlace rojo "Ver videos ▸" que dispara el segundo panel */
+.video-link-lista {
+  font-weight: 600;
+  color: var(--color-principal);
+  cursor: pointer;
+}
+
+/* Panel con Video 1 y Video 2 (se abre al lado) */
+/* Panel con Video 1 y Video 2 (se abre a la derecha) */
+.video-options {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;          /* 👉 ahora se abre a la DERECHA del globo */
+  margin-left: 10px;
+  right: auto;
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  width: 260px;
+  z-index: 2250;
+}
+
+
+/* Mostrar el panel cuando paso sobre el globito de teoría */
+.video-contenedor:hover .video-options,
+.video-options:hover {
+  display: block;
+}
+
+
+
+.video-options ul {
+  display: flex;
+  flex-direction: column; /* 👉 Apilar en vertical */
+  gap: 10px;
+}
+
+.video-option a {
+  display: block;
+  padding: 8px 4px;
+  font-size: 13px;
+  color: var(--color-negro);
+  text-decoration: none;
+  white-space: nowrap; /* 👉 Evita saltos de línea */
+}
+
+
+.video-option a:hover {
+  color: var(--color-principal);
+}
+
+/* Desactivar esta interacción en móvil (el menú móvil usa enlaces simples) */
+@media screen and (max-width: 800px) {
+  .submenu-video .video-dropdown,
+  .submenu-video .video-options {
+    display: none !important;
+  }
+}
+
+.video-option:hover {
+  color: var(--color-principal);
+}
+.video-options {
+  text-align: left; /* Mejór alineación visual */
+}
+
+/* =========================================================
+   MENÚ ESPECIAL: VIDEO — TEORÍA + OPCIONES
+   ========================================================= */
+
+.hm-menu ul li.submenu-video {
+  position: relative;
+}
+
+/* Globo principal con la teoría (OBS, explicación) */
+.video-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 18px 20px;
+  width: 360px;
+  z-index: 2200;
+}
+
+/* Mostrar el globo al pasar sobre "Video" */
+.submenu-video:hover .video-dropdown,
+.video-dropdown:hover {
+  display: block;
+}
+
+.video-contenedor {
+  position: relative;
+}
+
+.video-contenedor p {
+  font-size: 13px;
+  color: var(--color-negro);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Panel con Video 1 y Video 2 (a la derecha del globo) */
+.video-options {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  width: 260px;
+  z-index: 2250;
+}
+
+/* Mostrar el panel cuando paso sobre el globo */
+.video-contenedor:hover .video-options,
+.video-options:hover {
+  display: block;
+}
+
+/* Lista vertical */
+.video-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* en vertical */
+  gap: 10px;
+}
+
+/* Cada opción (Video 1 / Video 2) */
+.video-option {
+  position: relative;
+}
+
+/* Enlace de la opción */
+.video-option > a {
+  display: block;
+  padding: 6px 4px;
+  font-size: 13px;
+  color: var(--color-negro);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.video-option > a:hover {
+  color: var(--color-principal);
+}
+
+/* Miniatura del video (aparece al lado) */
+.video-subpreview {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+  z-index: 2300;
+}
+
+/* Mostrar miniatura al pasar por la opción */
+.video-option:hover .video-subpreview,
+.video-subpreview:hover {
+  display: block;
+}
+
+/* Tamaño del video-miniatura */
+.video-subpreview video {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Texto debajo de la miniatura */
+.video-subpreview span {
+  display: block;
+  margin-top: 4px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--color-negro);
+}
+
+/* Desactivar en móvil (el menú móvil solo usa enlaces simples) */
+@media screen and (max-width: 800px) {
+  .submenu-video .video-dropdown,
+  .submenu-video .video-options,
+  .submenu-video .video-subpreview {
+    display: none !important;
+  }
+}
+.info-academica h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.info-academica p {
+  margin: 0 0 10px 0;
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.4;
+}

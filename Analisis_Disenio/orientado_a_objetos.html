@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orientado a Objetos | Patata Republic</title>
+
+  <!-- Fuentes e iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="hm-wrapper">
+
+    <!-- HEADER global (lo arma layout.js) -->
+    <div id="site-header"></div>
+
+    <!-- =======================
+         INTRO: POO + UML
+    ======================== -->
+    <div class="hm-page-block">
+      <div class="container">
+        <div class="header-title">
+          <h1 data-aos="fade-up">Orientado a Objetos</h1>
+        </div>
+
+        <p data-aos="fade-up" data-aos-duration="800">
+          La <b>programación orientada a objetos (POO)</b> es un paradigma que organiza el software
+          en torno a <b>clases</b> y <b>objetos</b>, es decir, unidades que combinan datos y
+          comportamiento. Sus pilares principales son:
+          <b>encapsulamiento, herencia, polimorfismo y abstracción</b>.
+        </p>
+
+        <p data-aos="fade-up" data-aos-duration="900">
+          Estos principios permiten construir sistemas más <b>modulares, reutilizables y
+          fáciles de mantener</b>. En el caso del sistema de <b>Patata Republic</b>, se utilizan
+          clases para representar actores del negocio (cliente, cajero, cocinero, administrador),
+          pedidos, productos, inventario, entre otros elementos.
+        </p>
+
+        <p data-aos="fade-up" data-aos-duration="1000">
+          Para documentar y diseñar este tipo de sistemas se utiliza
+          <b>UML (Unified Modeling Language)</b>, un lenguaje de modelado visual que define
+          diferentes tipos de diagramas estructurales y de comportamiento. A continuación se
+          presentan algunos de los diagramas UML más relevantes del proyecto.
+        </p>
+      </div>
+    </div>
+
+    <!-- =======================
+         DIAGRAMA UML GENERAL
+    ======================== -->
+    <div class="hm-page-block bg-fondo" id="uml-general">
+      <div class="container">
+        <h2 class="subtitulo" data-aos="fade-up">Diagrama UML general</h2>
+
+        <p data-aos="fade-up" data-aos-duration="800">
+          El diagrama UML general muestra la <b>estructura estática</b> del sistema: las
+          principales clases del dominio, sus atributos, operaciones y las relaciones entre
+          ellas (asociaciones, agregaciones, composiciones y herencias).
+        </p>
+
+        <p data-aos="fade-up" data-aos-duration="900">
+          Este diagrama sirve como mapa global del sistema de Patata Republic, ayudando a
+          entender cómo se organizan las responsabilidades de cada clase y cómo colaboran
+          para cubrir los procesos de venta, preparación de pedidos y gestión de inventario.
+        </p>
+
+        <div class="modelo-img" data-aos="zoom-in" data-aos-duration="900">
+          <img src="img/uml.jpeg" alt="Diagrama UML general de Patata Republic">
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================
+         CASOS DE USO DE NEGOCIO
+    ======================== -->
+    <div class="hm-page-block" id="casos-negocio">
+      <div class="container">
+        <h2 class="subtitulo" data-aos="fade-up">Diagrama de casos de uso de negocio</h2>
+
+        <p data-aos="fade-up" data-aos-duration="800">
+          El diagrama de <b>casos de uso de negocio</b> describe los procesos principales de la
+          organización desde el punto de vista del negocio, antes de pensar en la parte
+          tecnológica. Se identifican actores como el cliente, el cajero o el proveedor, y
+          se muestra qué servicios ofrece Patata Republic para cada uno de ellos.
+        </p>
+
+        <p data-aos="fade-up" data-aos-duration="900">
+          Este modelo ayuda a comprender <b>qué hace la empresa</b> y cómo se relaciona con su
+          entorno: realizar pedidos, preparar alimentos, entregar productos, gestionar
+          insumos, etc. Es la base para decidir qué funcionalidades deben ser apoyadas
+          luego por el sistema informático.
+        </p>
+
+        <div class="modelo-img" data-aos="zoom-in" data-aos-duration="900">
+          <img src="img/casos.png" alt="Diagrama de casos de uso de negocio">
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================
+         CASOS DE USO DEL SISTEMA
+    ======================== -->
+    <div class="hm-page-block bg-fondo" id="casos-sistema">
+      <div class="container">
+        <h2 class="subtitulo" data-aos="fade-up">Diagrama de casos de uso del sistema</h2>
+
+        <p data-aos="fade-up" data-aos-duration="800">
+          El diagrama de <b>casos de uso del sistema</b> detalla cómo los actores interactúan
+          con el software de Patata Republic. Cada caso de uso representa una
+          <b>funcionalidad observada por el usuario</b>, como registrar un pedido, actualizar
+          el menú, controlar el stock de papas o generar reportes de ventas.
+        </p>
+
+        <p data-aos="fade-up" data-aos-duration="900">
+          A partir de estos casos de uso se definen los <b>requisitos funcionales</b>, se
+          elaboran escenarios y se diseñan pruebas. Es un puente entre el análisis del
+          negocio y el diseño orientado a objetos del sistema.
+        </p>
+
+        <div class="modelo-img" data-aos="zoom-in" data-aos-duration="900">
+          <img src="img/casos_de_uso.jpg" alt="Diagrama de casos de uso del sistema">
+        </div>
+      </div>
+    </div>
+
+    <div class="hm-page-block bg-fondo" id="casos-sistema">
+      <div class="container">
+        <h2 class="subtitulo" data-aos="fade-up">Caso de uso de tipo texto expandido</h2>
+
+        <p data-aos="fade-up" data-aos-duration="800">
+                <section id="cu-01-expandido">
+        <h2>6.3 Caso de uso de tipo texto expandido</h2>
+
+        <h2>CASO DE USO: Realizar pedido de papas fritas (tipo texto expandido)</h2>
+        <p><strong>Código:</strong> CU-01</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li><strong>Cliente</strong> (iniciador)</li>
+            <li><strong>Vendedor/Cajero</strong> (actor principal)</li>
+            <li><strong>Operario de cocina</strong> (actor interesado)</li>
+            <li><strong>Administrador</strong> (actor interesado en reportes e inventario, de forma indirecta)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Registrar un pedido de papas fritas y bebidas solicitado por un Cliente, calculando el total a pagar,
+            generando la orden para cocina y dejando el pedido listo para el registro de pago, la preparación y la entrega.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            Un Cliente acude al local de “Patata Republic” y solicita un pedido de papas fritas y/o bebidas.
+            El Vendedor/Cajero abre la opción “Realizar pedido” en el sistema, consulta el menú y precios
+            (CU2: Consultar menú y precios), registra los productos solicitados por el Cliente y el sistema
+            calcula el total del pedido. Una vez que el Cliente confirma, el Vendedor/Cajero registra el pago
+            (CU3: Registrar pago del pedido), el sistema genera el comprobante y crea la orden de preparación
+            para cocina (CU4: Preparar pedido en cocina). Cuando el Operario de cocina finaliza la preparación,
+            el pedido queda listo para ser entregado al Cliente (CU5: Entregar pedido al cliente).
+        </p>
+
+        <h3>TIPO</h3>
+        <p>Primario y esencial.</p>
+
+        <h3>REFERENCIAS CRUZADAS</h3>
+        <ul>
+            <li>CU2: Consultar menú y precios (include)</li>
+            <li>CU3: Registrar pago del pedido (include)</li>
+            <li>CU4: Preparar pedido en cocina (include)</li>
+            <li>CU5: Entregar pedido al cliente (include)</li>
+            <li>Requisitos: R1.1 (Gestión de pedidos), R1.2 (Cálculo de totales), R1.3 (Integración con pago), R1.4 (Orden para cocina)</li>
+        </ul>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>El sistema de ventas está operativo.</li>
+            <li>El Vendedor/Cajero está autenticado en el sistema.</li>
+            <li>El catálogo de productos y precios (menú) está configurado y vigente.</li>
+            <li>Opcional: El inventario de insumos está actualizado (para verificar disponibilidad).</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>El pedido del Cliente queda registrado en el sistema con su estado correspondiente (por ejemplo: “Pagado” y “En preparación” o según política del negocio).</li>
+            <li>El detalle del pedido (productos, cantidades, precios, total) queda almacenado para futuras consultas y reportes de ventas.</li>
+            <li>Se genera y asocia una orden de preparación para cocina.</li>
+            <li>En caso de cancelación antes del pago, no se genera pedido definitivo ni se afectan inventarios.</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Cliente se acerca al mostrador y solicita al Vendedor/Cajero realizar un pedido de papas fritas y/o bebidas.</td>
+                    <td>2. Muestra la opción “Realizar pedido” en el módulo de ventas.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor/Cajero selecciona la opción “Realizar pedido”.</td>
+                    <td>4. Abre la pantalla de nuevo pedido y muestra el menú de productos y precios (incluye CU2: Consultar menú y precios).</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor/Cajero consulta junto al Cliente las opciones de papas fritas, tamaños, acompañamientos y bebidas, y selecciona los productos deseados.</td>
+                    <td>6. Registra en el detalle del pedido los productos seleccionados, cantidades y precios, y muestra el subtotal actualizado.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor/Cajero confirma con el Cliente que el detalle del pedido es correcto (productos, tamaños, salsas, bebidas).</td>
+                    <td>8. Recalcula el total del pedido (subtotal, impuestos si aplica, descuentos) y muestra el monto final a pagar.</td>
+                </tr>
+                <tr>
+                    <td>El Cliente acepta el pedido y el Vendedor/Cajero procede a registrar el pago.</td>
+                    <td>10. Abre la opción de “Registrar pago” (incluye CU3: Registrar pago del pedido) y solicita el tipo de pago (efectivo, tarjeta, QR, etc.).</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor/Cajero ingresa el tipo de pago y el monto recibido.</td>
+                    <td>12. Valida el pago, registra el comprobante y marca el pedido como “Pagado”.</td>
+                </tr>
+                <tr>
+                    <td>Una vez registrado el pago, el Vendedor/Cajero confirma la generación de la orden para cocina.</td>
+                    <td>14. Genera la orden de preparación para el Operario de cocina (incluye CU4: Preparar pedido en cocina), asignando un número de pedido y el detalle a preparar.</td>
+                </tr>
+                <tr>
+                    <td>El Operario de cocina visualiza la orden y comienza la preparación del pedido.</td>
+                    <td>16. Actualiza el estado del pedido a “En preparación” y permite marcarlo como “Listo” cuando el Operario de cocina termine.</td>
+                </tr>
+                <tr>
+                    <td>Al estar listo, el Operario de cocina marca el pedido como “Listo para entrega”.</td>
+                    <td>18. Actualiza el estado del pedido a “Listo” y notifica en la interfaz del Vendedor/Cajero.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor/Cajero llama al Cliente y realiza la entrega del pedido.</td>
+                    <td>20. Registra la entrega (incluye CU5: Entregar pedido al cliente) y cambia el estado del pedido a “Entregado”, finalizando la atención.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 4: Menú o productos no disponibles o desactualizados</h4>
+        <ul>
+            <li>4a. El sistema indica que faltan productos configurados o que algunos están inactivos.</li>
+            <li>4b. El Vendedor/Cajero informa al Cliente de la situación y ofrece alternativas (otros productos o tamaños).</li>
+            <li>4c. Si el Cliente no acepta ninguna alternativa, el Vendedor/Cajero cancela la operación y el caso de uso termina sin registrar pedido.</li>
+        </ul>
+
+        <h4>Línea 5–6: Producto sin stock suficiente</h4>
+        <ul>
+            <li>6a. El sistema detecta que el stock de cierto producto o insumo es insuficiente (por integración con CU7).</li>
+            <li>6b. Muestra mensaje “Stock insuficiente para [producto]”.</li>
+            <li>6c. El Vendedor/Cajero puede reducir la cantidad del producto, sustituirlo por otro o eliminarlo del pedido.</li>
+            <li>6d. Una vez ajustado el detalle, el sistema recalcula el total y se regresa a la línea 7 de la secuencia normal.</li>
+        </ul>
+
+        <h4>Línea 8: El Cliente no está de acuerdo con el total</h4>
+        <ul>
+            <li>8a. El Cliente solicita cambiar algún producto o tamaño.</li>
+            <li>8b. El Vendedor/Cajero modifica el detalle del pedido (agrega, quita o cambia productos).</li>
+            <li>8c. El sistema recalcula el total y vuelve a mostrar el monto final.</li>
+            <li>8d. Se regresa a la línea 9 de la secuencia normal.</li>
+        </ul>
+
+        <h4>Línea 10–12: Problema con el pago</h4>
+        <ul>
+            <li>12a. En pago con tarjeta/QR, el sistema o el medio de pago indica error o transacción rechazada.</li>
+            <li>12b. El sistema muestra mensaje “Pago no autorizado” o “Error en la transacción”.</li>
+            <li>12c. El Vendedor/Cajero ofrece al Cliente usar otro medio de pago o cancelar el pedido.</li>
+            <li>12d. Si el Cliente realiza otro intento de pago, se repite el paso 11 y el sistema intenta nuevamente registrar el pago.</li>
+            <li>12e. Si el Cliente decide no continuar, el Vendedor/Cajero cancela el pedido y el caso de uso termina sin registrar venta.</li>
+        </ul>
+
+        <h4>Línea 14–16: Sobrecarga en cocina o error de envío de orden</h4>
+        <ul>
+            <li>16a. El sistema no logra enviar la orden a la pantalla de cocina (error de conexión).</li>
+            <li>16b. Muestra mensaje de error al Vendedor/Cajero: “No se pudo enviar la orden a cocina”.</li>
+            <li>16c. El Vendedor/Cajero puede reintentar el envío o, si el problema persiste, imprimir la orden en papel como respaldo.</li>
+            <li>16d. Una vez enviada o registrada manualmente, se retoma la secuencia normal en la línea 15.</li>
+        </ul>
+
+        <h4>Línea 19: Cliente no aparece para recoger el pedido (para pedidos adelantados)</h4>
+        <ul>
+            <li>19a. El tiempo de espera máximo se cumple y el Cliente no se presenta.</li>
+            <li>19b. El sistema permite marcar el pedido como “No recogido” o “Anulado por inasistencia” según política del negocio.</li>
+            <li>19c. El Administrador puede revisar posteriormente estos casos en reportes de ventas y mermas.</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-02 (primera versión)
+    =========================== -->
+    <section id="cu-02-primera">
+        <h2>CASO DE USO: Consultar menú y precios</h2>
+        <p><strong>Código:</strong> CU-02</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Cliente (actor iniciador)</li>
+            <li>Vendedor/Cajero (actor principal)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Permitir la visualización del menú de productos disponibles (papas fritas, tamaños, combos, bebidas y acompañamientos)
+            junto con sus precios vigentes, para apoyar la decisión de compra del Cliente y facilitar el registro correcto del pedido.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            Un Cliente se acerca al local y desea conocer las opciones de papas fritas, bebidas y sus precios antes de realizar un pedido.
+            El Vendedor/Cajero accede al módulo “Consultar menú y precios”, donde el sistema muestra el listado de productos activos,
+            sus descripciones, tamaños disponibles, combinaciones (combos) y precios actualizados. Esta información puede ser utilizada
+            directamente para informar al Cliente o para continuar con el registro del pedido (CU-01: Realizar pedido de papas fritas).
+        </p>
+
+        <h3>TIPO</h3>
+        <p>Secundario (de apoyo) y esencial.</p>
+
+        <h3>REFERENCIAS CRUZADAS</h3>
+        <ul>
+            <li>CU-01: Realizar pedido de papas fritas (lo incluye)</li>
+            <li>CU-06: Gestionar productos y precios</li>
+            <li>Requisitos: R2.1 (Visualización de menú), R2.2 (Precios vigentes), R2.3 (Productos activos)</li>
+        </ul>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>El sistema de ventas está operativo.</li>
+            <li>El catálogo de productos ha sido previamente configurado por el Administrador.</li>
+            <li>El Vendedor/Cajero está autenticado en el sistema (si se accede desde terminal interna).</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>No se generan cambios en la base de datos.</li>
+            <li>El menú y los precios mostrados pueden ser utilizados para iniciar o continuar un pedido de venta.</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Cliente solicita información sobre los productos y precios disponibles.</td>
+                    <td>2. Muestra la opción “Consultar menú y precios”.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor/Cajero selecciona “Consultar menú y precios”.</td>
+                    <td>4. Recupera del sistema el listado de productos activos.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor/Cajero solicita ver tipos de papas fritas y sus tamaños.</td>
+                    <td>6. Muestra las variedades de papas fritas, tamaños disponibles y precios correspondientes.</td>
+                </tr>
+                <tr>
+                    <td>El Cliente pregunta por acompañamientos, salsas o bebidas.</td>
+                    <td>8. Muestra acompañamientos y bebidas disponibles con sus precios.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor/Cajero revisa si existen combos u ofertas vigentes.</td>
+                    <td>10. Muestra combos activos, promociones y precios especiales, si existen.</td>
+                </tr>
+                <tr>
+                    <td>El Cliente decide qué productos desea pedir.</td>
+                    <td>12. Mantiene visible la información del menú para continuar con el registro del pedido o permite salir del módulo.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 4: No existen productos activos</h4>
+        <ul>
+            <li>4a. El sistema muestra el mensaje “No hay productos disponibles en el menú”.</li>
+            <li>4b. El Vendedor/Cajero informa al Cliente y recomienda esperar o regresar más tarde.</li>
+            <li>4c. El caso de uso finaliza.</li>
+        </ul>
+
+        <h4>Línea 6: Algunos productos no están disponibles por falta de stock</h4>
+        <ul>
+            <li>6a. El sistema indica visualmente qué productos están sin stock o temporalmente no disponibles.</li>
+            <li>6b. El Vendedor/Cajero informa al Cliente y sugiere productos alternativos.</li>
+        </ul>
+
+        <h4>Línea 8: Precios en actualización</h4>
+        <ul>
+            <li>8a. El sistema detecta que un producto tiene precio pendiente de actualización.</li>
+            <li>8b. Muestra mensaje “Precio en actualización, consultar con administrador”.</li>
+            <li>8c. El Vendedor/Cajero evita ofrecer ese producto o informa al Cliente del precio referencial.</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-01 (segunda versión)
+    =========================== -->
+    <section id="cu-01-segunda">
+        <h2>CASO DE USO: Realizar pedido de papas fritas</h2>
+        <p><strong>Código:</strong> CU-01</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Cliente (iniciador)</li>
+            <li>Vendedor/Cajero (actor principal)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Registrar el pedido de papas fritas, bebidas y otros productos solicitados por el Cliente, calcular el monto total
+            y dejar el pedido listo para el cobro, preparación y entrega.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            El Cliente se acerca al mostrador y solicita un pedido de papas fritas y/o bebidas. El Vendedor/Cajero consulta el menú
+            y precios disponibles (incluye CU-02), registra los productos seleccionados, cantidades y observaciones. El sistema
+            calcula el total del pedido, muestra el detalle y permite confirmar la orden. Una vez confirmado, el caso de uso
+            incluye el proceso de registrar el pago (CU-03), enviar el pedido a cocina para su preparación (CU-04) y posteriormente
+            su entrega al Cliente (CU-05). El pedido queda almacenado con un identificador único y su estado inicial (por ejemplo:
+            “pendiente de pago” o “en preparación”, según el flujo definido).
+        </p>
+
+        <p><strong>TIPO:</strong> Primario y esencial</p>
+        <p><strong>REFERENCIAS CRUZADAS:</strong> R1.1, R1.2, R1.3, CU-02, CU-03, CU-04, CU-05</p>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>El sistema de ventas está operativo.</li>
+            <li>El Vendedor/Cajero está autenticado en el sistema.</li>
+            <li>El catálogo de productos y precios está configurado (CU-06).</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>El pedido queda registrado con su detalle de productos, cantidades y total.</li>
+            <li>Queda disponible para el proceso de pago, preparación en cocina y entrega.</li>
+            <li>Si el Cliente cancela antes de confirmar, no se registra el pedido.</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Cliente solicita al Vendedor hacer un pedido de papas fritas y/o bebidas.</td>
+                    <td>2. Muestra la opción “Registrar pedido” y el menú de productos (incluye CU-02).</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor selecciona “Registrar pedido”.</td>
+                    <td>4. Presenta la interfaz de captura del pedido (lista de productos, tamaños, combos, bebidas).</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor selecciona los productos, cantidades y registra observaciones (salsas, tipo de corte, etc.).</td>
+                    <td>6. Calcula subtotales y el total del pedido en tiempo real.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor confirma el detalle del pedido con el Cliente.</td>
+                    <td>8. Muestra el resumen del pedido (productos, cantidades, total) y solicita confirmación final.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor confirma el pedido.</td>
+                    <td>10. Registra el pedido en la base de datos, genera un identificador de pedido y lo marca como “pendiente de pago” o según la política del local.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor procede al registro del pago.</td>
+                    <td>12. Invoca CU-03: Registrar pago del pedido.</td>
+                </tr>
+                <tr>
+                    <td>(Tras el pago) El Vendedor envía el pedido a cocina.</td>
+                    <td>14. Actualiza el estado del pedido y lo envía al módulo de cocina (incluye CU-04).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 6: Falta de stock de algún producto.</h4>
+        <ul>
+            <li>6a. El sistema indica que cierto producto o tamaño no tiene stock suficiente.</li>
+            <li>6b. El Vendedor propone un producto alternativo o modifica la cantidad.</li>
+            <li>6c. Se recalcula el total y se regresa a la línea 7 de la secuencia normal.</li>
+        </ul>
+
+        <h4>Línea 9: El Cliente decide cancelar el pedido.</h4>
+        <ul>
+            <li>9a. El Vendedor cancela la operación.</li>
+            <li>9b. El sistema descarta la información temporal y el caso de uso termina sin registrar el pedido.</li>
+        </ul>
+
+        <h4>Línea 12 (CU-03): El pago es rechazado.</h4>
+        <ul>
+            <li>12a. El sistema indica “Pago no aprobado” o “Error en el cobro”.</li>
+            <li>12b. El Vendedor puede intentar nuevamente el pago o cancelar el pedido.</li>
+            <li>12c. Si cancela, el pedido queda anulado o marcado como “cancelado”.</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-02 (segunda versión)
+    =========================== -->
+    <section id="cu-02-segunda">
+        <h2>CASO DE USO: Consultar menú y precios</h2>
+        <p><strong>Código:</strong> CU-02</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Cliente (actor interesado)</li>
+            <li>Vendedor/Cajero (actor principal)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Mostrar al Cliente el menú de papas fritas, combos, bebidas y otros productos, junto con sus precios actualizados y opciones de tamaño.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            El Vendedor/Cajero accede a la opción de “Consultar menú y precios” para mostrar al Cliente las alternativas de productos, tamaños,
+            combos y sus respectivos precios. El sistema carga la información desde el catálogo de productos, respetando configuraciones vigentes.
+            Este caso de uso se ejecuta frecuentemente como parte de “Realizar pedido de papas fritas” (CU-01).
+        </p>
+
+        <p><strong>TIPO:</strong> Primario y esencial (frecuentemente incluido por CU-01)</p>
+        <p><strong>REFERENCIAS CRUZADAS:</strong> R2.1, R2.2, CU-01, CU-06</p>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>El sistema está operativo.</li>
+            <li>El catálogo de productos y precios está configurado (CU-06).</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>Se presenta al Vendedor/Cajero y al Cliente la lista de productos y precios vigentes.</li>
+            <li>No se modifica información en la base de datos (es un caso de uso consultivo).</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Vendedor selecciona la opción “Consultar menú y precios” o abre la pantalla de venta.</td>
+                    <td>2. Recupera del catálogo los productos disponibles, tamaños, combos y precios.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor muestra la información al Cliente.</td>
+                    <td>4. Presenta la lista organizada por categorías (papas clásicas, papas especiales, combos, bebidas, etc.).</td>
+                </tr>
+                <tr>
+                    <td>El Cliente solicita información adicional (por ejemplo, tamaño o ingredientes).</td>
+                    <td>6. Muestra detalles del producto seleccionado (tamaños, descripción, precio unitario).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 2: No hay productos configurados.</h4>
+        <ul>
+            <li>2a. El sistema muestra mensaje “No hay productos disponibles” o “Catálogo vacío”.</li>
+            <li>2b. El Vendedor informa al Administrador para que configure productos (CU-06).</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-03
+    =========================== -->
+    <section id="cu-03">
+        <h2>CASO DE USO: Registrar pago del pedido</h2>
+        <p><strong>Código:</strong> CU-03</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Cliente (actor interesado)</li>
+            <li>Vendedor/Cajero (actor principal)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Registrar el cobro de un pedido, indicando el monto pagado y la forma de pago, y generar el comprobante correspondiente.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            Una vez confirmado el pedido, el Vendedor/Cajero solicita al Cliente el pago. El sistema muestra el total a pagar y permite seleccionar
+            la forma de pago (efectivo, tarjeta, QR, etc.). El Vendedor registra el monto recibido y el sistema calcula el cambio, si corresponde.
+            El sistema registra la transacción, asocia el pago al pedido y genera un comprobante de venta. Este caso de uso normalmente es incluido por CU-01.
+        </p>
+
+        <p><strong>TIPO:</strong> Primario y esencial</p>
+        <p><strong>REFERENCIAS CRUZADAS:</strong> R3.1, R3.2, R3.3, CU-01, CU-09</p>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>Existe un pedido registrado y confirmado (CU-01).</li>
+            <li>El Vendedor/Cajero está autenticado en el sistema.</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>El pago queda registrado y asociado al pedido.</li>
+            <li>El pedido cambia de estado (por ejemplo, a “pagado/en preparación”).</li>
+            <li>Se genera un comprobante de pago/venta.</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Vendedor selecciona la opción “Registrar pago” para un pedido.</td>
+                    <td>2. Muestra el detalle del pedido y el total a pagar.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor indica la forma de pago (efectivo, tarjeta, QR, etc.).</td>
+                    <td>4. Valida la forma de pago y habilita los campos necesarios (por ejemplo, número de voucher).</td>
+                </tr>
+                <tr>
+                    <td>El Cliente entrega el pago o autoriza la transacción.</td>
+                    <td>6. Registra el monto recibido y, si es efectivo, calcula el cambio.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor confirma el registro del pago.</td>
+                    <td>8. Registra la transacción en la base de datos, asocia el pago al pedido y actualiza el estado.</td>
+                </tr>
+                <tr>
+                    <td>El sistema genera el comprobante.</td>
+                    <td>10. Muestra y/o imprime el comprobante de pago para el Cliente.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 4–6: Fallo en el pago electrónico (tarjeta/QR).</h4>
+        <ul>
+            <li>6a. El sistema informa “Transacción rechazada” o “Error en el servicio de pago”.</li>
+            <li>6b. El Vendedor ofrece otro método de pago o cancelar el pedido.</li>
+            <li>6c. Si el Cliente elige otro método, se regresa a la línea 3.</li>
+            <li>6d. Si se cancela, el pedido se marca como “cancelado” según la política del local.</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-04
+    =========================== -->
+    <section id="cu-04">
+        <h2>CASO DE USO: Preparar pedido en cocina</h2>
+        <p><strong>Código:</strong> CU-04</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Operario de cocina (actor principal)</li>
+            <li>Vendedor/Cajero (actor interesado)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Gestionar la preparación de los pedidos en la cocina, permitiendo al Operario visualizar, preparar y actualizar el estado de cada pedido.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            Los pedidos confirmados y pagados se envían al módulo de cocina. El Operario de cocina consulta la lista de pedidos pendientes,
+            selecciona uno y prepara las papas fritas y otros productos solicitados. El sistema permite marcar el pedido como “en preparación”
+            y luego “listo”, notificando al Vendedor/Cajero para la entrega al Cliente.
+        </p>
+
+        <p><strong>TIPO:</strong> Primario y esencial</p>
+        <p><strong>REFERENCIAS CRUZADAS:</strong> R4.1, R4.2, CU-01, CU-05, CU-07</p>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>El pedido fue registrado y, según política, pagado (CU-01 y CU-03).</li>
+            <li>El Operario de cocina está autenticado en el sistema (si aplica).</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>El pedido cambia de estado a “listo para entregar”.</li>
+            <li>Se actualiza el tiempo de preparación (si el sistema lo registra).</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Operario de cocina accede al módulo “Pedidos en cocina”.</td>
+                    <td>2. Muestra la lista de pedidos pendientes con su detalle básico.</td>
+                </tr>
+                <tr>
+                    <td>El Operario selecciona un pedido a preparar.</td>
+                    <td>4. Muestra el detalle del pedido (productos, tamaños, observaciones).</td>
+                </tr>
+                <tr>
+                    <td>El Operario inicia la preparación.</td>
+                    <td>6. Actualiza el estado del pedido a “en preparación”.</td>
+                </tr>
+                <tr>
+                    <td>El Operario finaliza la preparación del pedido.</td>
+                    <td>8. Cambia el estado a “listo” y notifica al módulo de caja/venta.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 2: No hay pedidos pendientes.</h4>
+        <ul>
+            <li>2a. El sistema muestra mensaje “No hay pedidos en cocina”.</li>
+        </ul>
+
+        <h4>Línea 5: Falta alguno de los insumos (papas, aceite, envases, etc.).</h4>
+        <ul>
+            <li>5a. El Operario registra que falta un insumo.</li>
+            <li>5b. El sistema registra la incidencia y puede disminuir stock (CU-07) o marcar insumo crítico.</li>
+            <li>5c. El Operario informa al Vendedor para reprogramar o modificar el pedido.</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-05
+    =========================== -->
+    <section id="cu-05">
+        <h2>CASO DE USO: Entregar pedido al cliente</h2>
+        <p><strong>Código:</strong> CU-05</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Cliente (actor interesado)</li>
+            <li>Vendedor/Cajero (actor principal)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Registrar que el pedido preparado fue efectivamente entregado al Cliente y cerrar la atención.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            Una vez que el pedido está marcado como “listo” en cocina, el Vendedor/Cajero llama al Cliente, verifica el número de pedido o nombre
+            y le entrega el pedido. El sistema registra la entrega y cambia el estado del pedido a “entregado” o “finalizado”.
+        </p>
+
+        <p><strong>TIPO:</strong> Primario y esencial</p>
+        <p><strong>REFERENCIAS CRUZADAS:</strong> R5.1, CU-01, CU-03, CU-04</p>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>El pedido está preparado y marcado como “listo” (CU-04).</li>
+            <li>El pago ha sido registrado, si la política es pago previo (CU-03).</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>El pedido queda marcado como “entregado” o “finalizado”.</li>
+            <li>Puede utilizarse la información para estadísticas o reportes de ventas (CU-09).</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Vendedor verifica en el sistema los pedidos “listos para entregar”.</td>
+                    <td>2. Muestra la lista de pedidos listos con su identificador y nombre del Cliente.</td>
+                </tr>
+                <tr>
+                    <td>El Cliente se presenta para recoger su pedido.</td>
+                    <td>4. Permite al Vendedor buscar el pedido por número o nombre.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor confirma la identidad del Cliente y la correspondencia del pedido.</td>
+                    <td>6. Muestra el detalle del pedido seleccionado.</td>
+                </tr>
+                <tr>
+                    <td>El Vendedor entrega el pedido al Cliente.</td>
+                    <td>8. Cambia el estado del pedido a “entregado/finalizado” y registra la hora de entrega.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 3: El Cliente no se presenta durante un tiempo razonable.</h4>
+        <ul>
+            <li>3a. El Vendedor puede marcar el pedido como “no recogido” según política.</li>
+            <li>3b. El sistema registra el estado para control interno.</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-06
+    =========================== -->
+    <section id="cu-06">
+        <h2>CASO DE USO: Gestionar productos y precios</h2>
+        <p><strong>Código:</strong> CU-06</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Administrador (actor principal)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Permitir al Administrador crear, modificar, desactivar productos del menú y actualizar sus precios.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            El Administrador accede al módulo de “Gestión de productos y precios”. Puede registrar nuevos productos (por ejemplo, nuevos tipos
+            de papas fritas, combos, bebidas), editar la descripción, categoría, tamaño y precio, o desactivar productos que ya no se venden.
+            El sistema valida la información, guarda los cambios y actualiza el catálogo utilizado en ventas y consultas de menú (CU-01, CU-02).
+        </p>
+
+        <p><strong>TIPO:</strong> Primario (administrativo) y esencial</p>
+        <p><strong>REFERENCIAS CRUZADAS:</strong> R6.1, R6.2, CU-01, CU-02, CU-09</p>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>El Administrador está autenticado con permisos de gestión.</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>Los productos y precios quedan actualizados en el catálogo.</li>
+            <li>Los cambios impactan en las futuras ventas y consultas de menú.</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Administrador accede a “Gestionar productos y precios”.</td>
+                    <td>2. Muestra la lista de productos actuales con sus precios y estados (activo/inactivo).</td>
+                </tr>
+                <tr>
+                    <td>El Administrador selecciona “Crear producto” o “Editar producto”.</td>
+                    <td>4. Presenta el formulario para registrar o actualizar datos (nombre, categoría, precio, etc.).</td>
+                </tr>
+                <tr>
+                    <td>El Administrador ingresa o modifica la información del producto.</td>
+                    <td>6. Valida que los campos obligatorios estén completos y el formato sea correcto.</td>
+                </tr>
+                <tr>
+                    <td>El Administrador confirma la acción (crear/actualizar/desactivar).</td>
+                    <td>7. Registra los cambios en la base de datos y actualiza el catálogo.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 6: Datos incompletos o inválidos.</h4>
+        <ul>
+            <li>6a. El sistema indica qué campos están incorrectos o vacíos.</li>
+            <li>6b. El Administrador corrige la información.</li>
+            <li>6c. Regresa a la línea 7 de la secuencia normal.</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-07
+    =========================== -->
+    <section id="cu-07">
+        <h2>CASO DE USO: Gestionar inventario de insumos</h2>
+        <p><strong>Código:</strong> CU-07</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Operario de cocina (actor interesado)</li>
+            <li>Administrador (actor principal)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Registrar y actualizar el stock de insumos (papas, aceite, salsas, envases, etc.), identificar insumos críticos y controlar los movimientos de inventario.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            El Administrador o persona encargada de inventario accede al módulo de “Inventario de insumos”. Puede revisar el stock actual,
+            registrar ajustes manuales (mermas, correcciones) y consultar insumos con stock crítico. Este caso de uso incluye el registro
+            de recepción de insumos de proveedores (CU-08) cuando se ingresan nuevas compras.
+        </p>
+
+        <p><strong>TIPO:</strong> Primario (administrativo) y esencial</p>
+        <p><strong>REFERENCIAS CRUZADAS:</strong> R7.1, R7.2, CU-04, CU-08, CU-10</p>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>El Administrador está autenticado.</li>
+            <li>Existe un catálogo de insumos configurado.</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>El inventario de insumos se actualiza.</li>
+            <li>Se registran los movimientos realizados (ingresos, egresos, ajustes).</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Administrador accede a “Gestionar inventario de insumos”.</td>
+                    <td>2. Muestra el listado de insumos con stock actual y estado (normal/crítico).</td>
+                </tr>
+                <tr>
+                    <td>El Administrador selecciona un insumo para revisar o ajustar.</td>
+                    <td>4. Muestra el detalle del insumo y su historial de movimientos.</td>
+                </tr>
+                <tr>
+                    <td>El Administrador registra un ajuste de stock (por ejemplo, merma o corrección).</td>
+                    <td>6. Valida los datos del ajuste (cantidad, motivo).</td>
+                </tr>
+                <tr>
+                    <td>El Administrador confirma el ajuste.</td>
+                    <td>8. Registra el movimiento en la base de datos y actualiza el stock.</td>
+                </tr>
+                <tr>
+                    <td>El Administrador registra una nueva entrada de insumos.</td>
+                    <td>10. Invoca CU-08: Registrar recepción de insumos del proveedor.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 2: No hay insumos registrados.</h4>
+        <ul>
+            <li>2a. El sistema muestra mensaje “No hay insumos configurados”.</li>
+            <li>2b. El Administrador debe registrar insumos iniciales (fuera del alcance o mediante otro CU).</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-08
+    =========================== -->
+    <section id="cu-08">
+        <h2>CASO DE USO: Registrar recepción de insumos del proveedor</h2>
+        <p><strong>Código:</strong> CU-08</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Proveedor (actor interesado)</li>
+            <li>Administrador (actor principal)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Registrar las compras de insumos a proveedores y el ingreso de dichos insumos al inventario.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            Cuando llega un pedido de insumos (papas, aceite, salsas, envases, etc.), el Administrador registra la recepción:
+            selecciona el Proveedor, indica los insumos recibidos, cantidades, precios de compra y fecha. El sistema valida los datos,
+            actualiza el inventario de insumos (CU-07) y registra el movimiento de ingreso para fines de control y reporte.
+        </p>
+
+        <p><strong>TIPO:</strong> Primario (administrativo) y esencial</p>
+        <p><strong>REFERENCIAS CRUZADAS:</strong> R8.1, R8.2, CU-07, CU-10</p>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>El Proveedor está registrado en el sistema.</li>
+            <li>El Administrador está autenticado.</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>Se registra una compra/recepción de insumos.</li>
+            <li>El stock de los insumos se incrementa según las cantidades recibidas.</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Administrador accede a “Registrar recepción de insumos”.</td>
+                    <td>2. Muestra formulario para registrar proveedor, fecha y detalle de insumos.</td>
+                </tr>
+                <tr>
+                    <td>El Administrador selecciona al Proveedor.</td>
+                    <td>4. Valida que el proveedor exista y muestra sus datos básicos.</td>
+                </tr>
+                <tr>
+                    <td>El Administrador ingresa los insumos recibidos (tipo, cantidad, precio unitario).</td>
+                    <td>6. Valida formato de datos (cantidades numéricas, precios válidos).</td>
+                </tr>
+                <tr>
+                    <td>El Administrador confirma la recepción.</td>
+                    <td>8. Registra la compra en la base de datos, actualiza stock de cada insumo y genera un registro de movimiento de inventario.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 4: El proveedor no está registrado.</h4>
+        <ul>
+            <li>4a. El sistema indica “Proveedor no encontrado”.</li>
+            <li>4b. El Administrador puede registrar un nuevo proveedor (si existe un CU correspondiente) o cancelar la operación.</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-09
+    =========================== -->
+    <section id="cu-09">
+        <h2>CASO DE USO: Generar reporte de ventas</h2>
+        <p><strong>Código:</strong> CU-09</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Vendedor/Cajero (actor interesado)</li>
+            <li>Administrador (actor principal)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Generar reportes de ventas diarias, semanales o mensuales, por producto, monto total, forma de pago y otros criterios.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            El Administrador o Vendedor/Cajero con permisos de consulta accede a “Reporte de ventas”. Selecciona un rango de fechas y filtros
+            (por producto, forma de pago, turno, etc.). El sistema procesa la información de los pedidos y pagos registrados, genera un reporte
+            con totales y subtotales y, opcionalmente, incluye información de inventario (CU-10) cuando se requiere un reporte integral de ventas
+            e inventario.
+        </p>
+
+        <p><strong>TIPO:</strong> Primario (de reporte) y esencial</p>
+        <p><strong>REFERENCIAS CRUZADAS:</strong> R9.1, R9.2, CU-01, CU-03, CU-10</p>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>Existen ventas registradas en el sistema.</li>
+            <li>El usuario que genera el reporte está autenticado y tiene permisos.</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>Se genera un reporte de ventas en pantalla y/o formato imprimible/exportable.</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Administrador accede a “Generar reporte de ventas”.</td>
+                    <td>2. Muestra filtros disponibles (rango de fechas, producto, forma de pago, etc.).</td>
+                </tr>
+                <tr>
+                    <td>El Administrador selecciona el rango de fechas y filtros deseados.</td>
+                    <td>4. Valida los filtros y prepara la consulta.</td>
+                </tr>
+                <tr>
+                    <td>El Administrador solicita generar el reporte.</td>
+                    <td>6. Procesa las ventas del período seleccionado y calcula totales y subtotales.</td>
+                </tr>
+                <tr>
+                    <td>El sistema muestra el reporte de ventas.</td>
+                    <td>8. Presenta la información en tabla y, si se solicita un reporte completo, incluye información de inventario (invoca CU-10).</td>
+                </tr>
+                <tr>
+                    <td>El Administrador puede exportar o imprimir el reporte.</td>
+                    <td>10. Genera el archivo (por ejemplo, PDF/Excel) o envía a impresión.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 6: No existen ventas en el período seleccionado.</h4>
+        <ul>
+            <li>6a. El sistema muestra mensaje “No se encontraron ventas en el rango seleccionado”.</li>
+            <li>6b. El Administrador puede cambiar el rango de fechas o cancelar.</li>
+        </ul>
+    </section>
+
+    <!-- ==========================
+         CU-10
+    =========================== -->
+    <section id="cu-10">
+        <h2>CASO DE USO: Generar reporte de inventario</h2>
+        <p><strong>Código:</strong> CU-10</p>
+
+        <h3>ACTORES</h3>
+        <ul>
+            <li>Administrador (actor principal)</li>
+        </ul>
+
+        <h3>PROPÓSITO</h3>
+        <p>
+            Mostrar la situación del inventario de insumos: stock disponible, insumos críticos y movimientos de entrada y salida en un período determinado.
+        </p>
+
+        <h3>RESUMÉN</h3>
+        <p>
+            El Administrador accede a “Reporte de inventario” y selecciona si desea ver stock actual, insumos críticos o el historial de movimientos en un rango de fechas.
+            El sistema consulta los registros de inventario (CU-07, CU-08) y presenta un reporte detallado. Este caso de uso puede ser incluido desde CU-09 cuando se requiere
+            un reporte combinado de ventas e inventario.
+        </p>
+
+        <p><strong>TIPO:</strong> Primario (de reporte) y esencial</p>
+        <p><strong>REFERENCIAS CRUZADAS:</strong> R10.1, R10.2, CU-07, CU-08, CU-09</p>
+
+        <h3>PRECONDICIONES</h3>
+        <ul>
+            <li>Existen insumos registrados e inventario previamente gestionado.</li>
+            <li>El Administrador está autenticado.</li>
+        </ul>
+
+        <h3>POSTCONDICIONES</h3>
+        <ul>
+            <li>Se genera un reporte de inventario en pantalla y/o formato imprimible/exportable.</li>
+        </ul>
+
+        <h3>SECUENCIA NORMAL DE EVENTOS</h3>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ACCIONES DEL ACTOR</th>
+                    <th>RESPUESTA DEL SISTEMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Administrador accede a “Generar reporte de inventario”.</td>
+                    <td>2. Muestra opciones de reporte (stock actual, insumos críticos, movimientos, etc.) y filtros (rango de fechas).</td>
+                </tr>
+                <tr>
+                    <td>El Administrador selecciona el tipo de reporte e ingresa filtros.</td>
+                    <td>4. Valida los filtros y prepara la consulta.</td>
+                </tr>
+                <tr>
+                    <td>El Administrador solicita generar el reporte.</td>
+                    <td>5. Consulta los movimientos de inventario y stock actual, y procesa la información.</td>
+                </tr>
+                <tr>
+                    <td>El sistema muestra el reporte de inventario.</td>
+                    <td>7. Presenta el stock por insumo, marca los insumos críticos y, si se pidió, muestra el historial de movimientos.</td>
+                </tr>
+                <tr>
+                    <td>El Administrador puede exportar o imprimir el reporte.</td>
+                    <td>9. Genera el archivo y/o envía a impresión.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CURSOS ALTERNOS</h3>
+        <h4>Línea 5: No hay movimientos ni datos para el filtro seleccionado.</h4>
+        <ul>
+            <li>5a. El sistema muestra “No se encontraron datos de inventario para el rango seleccionado”.</li>
+            <li>5b. El Administrador puede ajustar filtros o ver el stock general sin filtro por fecha.</li>
+        </ul>
+    </section>
+        </p>
+
+        
+      </div>
+    </div>
+
+    <!-- FOOTER global (lo arma layout.js) -->
+    <div id="site-footer"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/layout.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    AOS.init({ duration: 1200 });
+  </script>
+</body>
+</html>

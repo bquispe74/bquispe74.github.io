@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis Estructurado | Patata Republic</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="hm-wrapper">
+
+    <div id="site-header"></div>
+
+      <div class="hm-page-block">
+    <div class="container">
+
+      <!-- TÍTULO PRINCIPAL -->
+      <div class="header-title" id="teoria">
+        <h1 data-aos="fade-up">Análisis Estructurado</h1>
+      </div>
+
+      <!-- INTRODUCCIÓN TEÓRICA -->
+      <p data-aos="fade-up" data-aos-duration="1000">
+        El análisis estructurado es un paradigma de desarrollo que se centra en 
+        comprender el sistema a través de sus procesos, el flujo de información,
+        sus actores externos y el comportamiento que este presenta.
+        Se apoya principalmente en tres modelos fundamentales:
+      </p>
+
+      <ul data-aos="fade-up" data-aos-duration="1200" style="margin-top:15px;">
+        <li><b>Modelo Ambiental:</b> Define el sistema desde el punto de vista externo e identifica los actores y sus interacciones.</li>
+        <li><b>Modelo Esencial:</b> Representa el funcionamiento interno del sistema mediante Diagramas de Flujo de Datos (DFD).</li>
+        <li><b>Modelo de Comportamiento:</b> Describe cómo responden los procesos a diferentes eventos en el tiempo.</li>
+      </ul>
+
+      <!-- MODELO AMBIENTAL -->
+      <div class="header-title" style="margin-top:60px;" id="ambiental">
+        <h1 data-aos="fade-up">Modelo Ambiental</h1>
+      </div>
+
+      <p data-aos="fade-up" data-aos-duration="1000">
+        Este modelo muestra las entidades externas que interactúan con el sistema, 
+        especificando qué datos entran y qué datos salen.
+      </p>
+
+      <div class="modelo-img">
+        <img src="img/modelo_ambiental.jpeg" alt="Modelo Ambiental" data-aos="zoom-in">
+      </div>
+
+      <!-- MODELO ESENCIAL - DFD -->
+      <div class="header-title" style="margin-top:60px;">
+        <h1 data-aos="fade-up">Modelo Esencial — DFD</h1>
+      </div>
+
+      <p data-aos="fade-up" data-aos-duration="1000">
+        Los Diagramas de Flujo de Datos representan los procesos, los almacenes de datos,
+        las entradas y salidas de información dentro del sistema. Se descomponen por
+        niveles para lograr una mayor claridad.
+      </p>
+
+      <!-- Nivel 1 -->
+      <h3 class="subtitulo" data-aos="fade-right" id="nivel1">Nivel 1</h3>
+      <div class="modelo-img">
+        <img src="img/nivel1.jpeg" alt="Modelo Nivel 1" data-aos="zoom-in">
+      </div>
+
+      <!-- Nivel 2 -->
+      <h3 class="subtitulo" data-aos="fade-right" style="margin-top:40px;" id="nivel2">Nivel 2</h3>
+      <div class="modelo-img">
+        <img src="img/nivel2.jpeg" alt="Modelo Nivel 2" data-aos="zoom-in">
+      </div>
+
+      <!-- Nivel 3 -->
+      <h3 class="subtitulo" data-aos="fade-right" style="margin-top:40px;" id="nivel3">Nivel 3</h3>
+      <div class="modelo-img">
+        <img src="img/nivel3.jpeg" alt="Modelo Nivel 3" data-aos="zoom-in">
+      </div>
+
+      <!-- MODELO DE COMPORTAMIENTO -->
+      <div class="header-title" style="margin-top:60px;" id="comportamiento">
+        <h1 data-aos="fade-up">Modelo de Comportamiento</h1>
+      </div>
+
+      <p data-aos="fade-up" data-aos-duration="1000">
+        Representa el conjunto de eventos que controlan el flujo del sistema, así como
+        las respuestas que ejecuta internamente.
+      </p>
+
+      <div class="modelo-img">
+        <img src="img/modelo_comportamiento.jpeg" alt="Modelo de Comportamiento" data-aos="zoom-in">
+      </div>
+
+    </div>
+  </div>
+
+
+    <div id="site-footer"></div>
+  </div>
+
+  <script src="js/layout.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/app.js"></script>
+  <script>AOS.init({ duration: 1200 });</script>
+</body>
+</html>
