@@ -1,0 +1,257 @@
+<!-- partials/header.html -->
+<div class="hm-header">
+  <div class="container">
+    <div class="header-menu">
+
+      <div class="hm-logo">
+        <a href="index.html">
+          <img src="img/logo.jpeg" alt="Logo" style="width:110px; height:auto;">
+        </a>
+      </div>
+
+      <nav class="hm-menu">
+        <ul>
+          <!-- INICIO -->
+          <li><a href="index.html">Inicio</a></li>
+
+          <!-- ==========================
+               ANÁLISIS ESTRUCTURADO
+          =========================== -->
+          <li class="submenu submenu-estructurado">
+            <a href="analisis_estructurado.html">Análisis Estructurado</a>
+
+            <!-- Paso 1: solo teoría -->
+            <div class="as-dropdown">
+              <div class="as-contenedor">
+                <p>
+                  Paradigma que analiza el sistema mediante sus procesos y datos.
+                  Se apoya en el
+                  <span class="as-link-modelo">modelo esencial ▸</span>
+                  para descomponer el sistema en niveles.
+                </p>
+
+                <!-- Paso 2: opciones del modelo esencial -->
+                <div class="as-model-options">
+                  <ul>
+                    <li class="has-sub as-opcion">
+                      <a href="analisis_estructurado.html#ambiental">
+                        Modelo Ambiental ▸
+                      </a>
+
+                      <!-- Paso 3: miniaturas modelo ambiental -->
+                      <div class="as-subpreview as-grid-4">
+                        <a href="analisis_estructurado.html#ambiental">
+                          <img src="img/modelo_ambiental.jpeg" alt="Ambiental">
+                          <span>Ambiental</span>
+                        </a>
+                        <a href="analisis_estructurado.html#nivel1">
+                          <img src="img/nivel1.jpeg" alt="Nivel 1">
+                          <span>Nivel 1</span>
+                        </a>
+                        <a href="analisis_estructurado.html#nivel2">
+                          <img src="img/nivel2.jpeg" alt="Nivel 2">
+                          <span>Nivel 2</span>
+                        </a>
+                        <a href="analisis_estructurado.html#nivel3">
+                          <img src="img/nivel3.jpeg" alt="Nivel 3">
+                          <span>Nivel 3</span>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="has-sub as-opcion">
+                      <a href="analisis_estructurado.html#comportamiento">
+                        Modelo de Comportamiento ▸
+                      </a>
+
+                      <!-- Paso 4: miniatura modelo de comportamiento -->
+                      <div class="as-subpreview">
+                        <a href="analisis_estructurado.html#comportamiento">
+                          <img src="img/modelo_comportamiento.jpeg" alt="Modelo de Comportamiento">
+                          <span>Ver modelo</span>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div><!-- /.as-model-options -->
+              </div><!-- /.as-contenedor -->
+            </div><!-- /.as-dropdown -->
+          </li>
+
+          <!-- ==========================
+               ORIENTADO A OBJETOS
+          =========================== -->
+          <li class="submenu submenu-oo">
+            <a href="orientado_a_objetos.html">Orientado a Objetos</a>
+
+            <!-- Paso 1: teoría UML -->
+            <div class="oo-dropdown">
+              <div class="oo-contenedor">
+                <p>
+                  UML (Unified Modeling Language) es un lenguaje estándar de modelado
+                  orientado a objetos que permite representar la estructura y el
+                  comportamiento de un sistema antes de programarlo.
+                  Se basa en <b>diagramas UML</b> que describen actores, casos de uso,
+                  clases, relaciones y flujos de interacción.
+                  <br><br>
+                  En este proyecto utilizamos
+                  <span class="oo-link-diagramas">diagramas UML ▸</span>
+                  para describir el sistema de Patata Republic.
+                </p>
+
+                <!-- Paso 2: opciones (verticales) -->
+                <div class="oo-options">
+                  <ul>
+                    <li class="oo-option">
+                      <a href="orientado_a_objetos.html#uml-general">
+                        Diagrama UML general ▸
+                      </a>
+                      <div class="oo-subpreview">
+                        <a href="orientado_a_objetos.html#uml-general">
+                          <img src="img/uml.jpeg" alt="Diagrama UML general">
+                          <span>Diagrama UML</span>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="oo-option">
+                      <a href="orientado_a_objetos.html#casos-negocio">
+                        Casos de uso de negocio ▸
+                      </a>
+                      <div class="oo-subpreview">
+                        <a href="orientado_a_objetos.html#casos-negocio">
+                          <img src="img/casos.png" alt="Casos de uso de negocio">
+                          <span>Casos de uso de negocio</span>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="oo-option">
+                      <a href="orientado_a_objetos.html#casos-sistema">
+                        Casos de uso del sistema ▸
+                      </a>
+                      <div class="oo-subpreview">
+                        <a href="orientado_a_objetos.html#casos-sistema">
+                          <img src="img/casos_de_uso.jpg" alt="Casos de uso del sistema">
+                          <span>Casos de uso del sistema</span>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div><!-- /.oo-options -->
+              </div><!-- /.oo-contenedor -->
+            </div><!-- /.oo-dropdown -->
+          </li>
+
+          <!-- ==========================
+               MARCO TEÓRICO (MISMA PÁGINA)
+          =========================== -->
+          <!-- ahora apunta a la sección dentro de index.html -->
+          <li class="submenu-mt">
+  <a href="marco_teorico.html">Marco Teórico</a>
+
+  <!-- Paso 1: teoría breve -->
+  <div class="mt-dropdown">
+    <div class="mt-contenedor">
+      <p>
+        El <b>Marco Teórico</b> explica los conceptos que sustentan el sistema:
+        Programación Orientada a Objetos, UML, casos de uso y la gestión de
+        inventarios aplicada a <b>Patata Republic</b>.
+        <br><br>
+        Explora los <span class="mt-link-temas">temas principales ▸</span>
+        para entender la base teórica del proyecto.
+      </p>
+
+      <!-- Paso 2: lista de temas (sin imágenes) -->
+      <div class="mt-options">
+        <ul>
+          <li class="mt-option">
+            <a href="marco_teorico.html#mt-poo">
+              Programación Orientada a Objetos
+            </a>
+          </li>
+          <li class="mt-option">
+            <a href="marco_teorico.html#mt-uml">
+              UML y modelado del sistema
+            </a>
+          </li>
+          <li class="mt-option">
+            <a href="marco_teorico.html#mt-casos-uso">
+              Diagramas y casos de uso
+            </a>
+          </li>
+          <li class="mt-option">
+            <a href="marco_teorico.html#mt-inventarios">
+              Sistema de gestión de inventarios
+            </a>
+          </li>
+        </ul>
+      </div><!-- /.mt-options -->
+    </div><!-- /.mt-contenedor -->
+  </div><!-- /.mt-dropdown -->
+</li>
+
+
+          <li class="submenu submenu-video">
+  <a href="video.html">Video</a>
+
+  <div class="video-dropdown">
+    <div class="video-contenedor">
+      <p>
+        En esta sección se presentan dos videos elaborados para explicar los
+        diagramas del proyecto Patata Republic. Fueron grabados con <b>OBS Studio</b>,
+        permitiendo capturar la pantalla con narración del estudiante.
+        <br><br>
+        Selecciona un video para ver el contenido:
+      </p>
+
+      <!-- SEGUNDO PANEL: Video 1 y Video 2 -->
+      <div class="video-options">
+        <ul>
+          <li class="video-option">
+            <a href="video1.html">Video 1 – Análisis estructurado ▸</a>
+            <div class="video-subpreview">
+              <img src="../img/videoCap1.png" alt="Miniatura Video 1">
+            </div>
+          </li>
+
+          <li class="video-option">
+            <a href="video2.html">Video 2 – Orientado a Objetos ▸</a>
+            <div class="video-subpreview">
+              <img src="../img/video1Cap2.png" alt="Miniatura Video 2">
+            </div>
+          </li>
+        </ul>
+      </div><!-- /.video-options -->
+
+    </div><!-- /.video-contenedor -->
+  </div><!-- /.video-dropdown -->
+</li>
+
+
+
+          <!-- CONTACTO -->
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <div class="icon-menu">
+          <button type="button"><i class="fas fa-bars"></i></button>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+<!-- Menú móvil -->
+<div class="header-menu-movil">
+  <button class="cerrar-menu"><i class="fas fa-times"></i></button>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="analisis_estructurado.html">Análisis Estructurado</a></li>
+    <li><a href="orientado_a_objetos.html">Orientado a Objetos</a></li>
+    <li><a href="index.html#marco-teorico">Marco Teórico</a></li>
+    <li><a href="video.html">Video</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</div>
